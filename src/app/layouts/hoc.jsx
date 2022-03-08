@@ -7,7 +7,11 @@ import BlockQuoteWrapper from "../components/common/blockQuote";
 import Title from "../components/common/typografy/title";
 import Subtitle from "../components/common/typografy/subtitle";
 import Divider from "../components/common/divider";
+import withAuth from "../components/examples/hoc/withAuth";
+import SimpleComponent from "../components/examples/hoc/SimpleComponent";
 const HOCLayout = () => {
+    const NewSimpleComponent = withAuth(SimpleComponent);
+
     return (
         <>
             <Title>HOC</Title>
@@ -41,6 +45,7 @@ const HOCLayout = () => {
             <Divider />
             <Subtitle>Упражнения</Subtitle>
             <HocExercise />
+            <NewSimpleComponent />
         </>
     );
 };
